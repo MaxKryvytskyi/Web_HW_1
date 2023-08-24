@@ -1,7 +1,9 @@
-from bot_work import input_error, works_bot, start_work_bot
-from note_book import Note, Tag, Record, NoteBook
 from rich.console import Console
 import re
+
+from BotAssistant.bot_work import input_error, works_bot, start_work_bot
+from BotAssistant.note_book import Note, Tag, Record, NoteBook
+
 
 note_book = NoteBook()
 

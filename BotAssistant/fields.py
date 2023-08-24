@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 from abc import ABC, abstractmethod
-from my_exception import ExceptionIncorrectFormat
+from BotAssistant.my_exception import ExceptionIncorrectFormat
 
 
 class PersonFormatterInfo(ABC):

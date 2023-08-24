@@ -2,12 +2,12 @@ from datetime import datetime
 from rich.console import Console
 import re
 
-from my_exception import ExceptionIncorrectFormat
-import birthday_n_days as bd
-from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
-from address_book import AddressBook
-from person import Person
-from bot_work import input_error, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name, works_bot, start_work_bot
+from BotAssistant.my_exception import ExceptionIncorrectFormat
+import BotAssistant.birthday_n_days as bd
+from BotAssistant.fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
+from BotAssistant.address_book import AddressBook
+from BotAssistant.person import Person
+from BotAssistant.bot_work import input_error, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name, works_bot, start_work_bot
 
 
 adress_book = AddressBook()

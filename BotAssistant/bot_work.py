@@ -3,9 +3,9 @@ from rich.console import Console
 from rich.table import Table
 
 
-from address_book import AddressBook
-from note_book import NoteBook
-from my_exception import ExceptionIncorrectFormat
+from BotAssistant.address_book import AddressBook
+from BotAssistant.note_book import NoteBook
+from BotAssistant.my_exception import ExceptionIncorrectFormat
 
 works_bot = True
 

@@ -1,5 +1,5 @@
 [project]
-name = "bot assistant"
+name = "BotAssistant"
 version = "1.0.0"
 authors = [
     { name="Maxim Krivitsky", email="max.krivitskyh@gmail.com"},
@@ -18,8 +18,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Aleksandr-Levchenko/Project_Core_group1_ver.1"
-"Bug Tracker" = "https://github.com/Aleksandr-Levchenko/Project_Core_group1_ver.1"
+"Homepage" = "https://github.com/MaxKryvytskyi/Web_HW_1"
+"Bug Tracker" = "https://github.com/MaxKryvytskyi/Web_HW_1"
 
 [build-system]
 requires = [
@@ -29,4 +29,4 @@ build-backend = "setuptools.build_meta"
 
 
 [project.scripts]
-recordbook = "recordbook.main:main"
+Bot = "BotAssistant.main:main"
