@@ -1,5 +1,6 @@
-from BotAssistant.fields import PersonFormatterInfo
+from fields import PersonFormatterInfo
 
+# from BotAssistant.fields import PersonFormatterInfo
 
 class Person:
     def __init__(self, name: PersonFormatterInfo="None", phone: PersonFormatterInfo="None", email: PersonFormatterInfo="None", birthday: PersonFormatterInfo="None", status: PersonFormatterInfo="None", address: PersonFormatterInfo="None", note: PersonFormatterInfo="None") -> None:

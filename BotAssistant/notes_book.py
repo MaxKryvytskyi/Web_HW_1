@@ -1,11 +1,16 @@
 from rich.console import Console
 import re
 
-from BotAssistant.bot_work import input_error, works_bot, start_work_bot
-from BotAssistant.note_book import Note, Tag, Record, NoteBook
+# from BotAssistant.bot_work import input_error, works_bot, start_work_bot
+# from BotAssistant.note_book import Note, Tag, Record, NoteBook
+# from BotAssistant.console_view import Console_View
 
+from bot_work import input_error, works_bot, start_work_bot
+from note_book import Note, Tag, Record, NoteBook
+from console_view import Console_View
 
 note_book = NoteBook()
+console_view = Console_View()
 
 @input_error
 def add(*args: str): 
@@ -62,7 +67,13 @@ def search(*args: str):
 @input_error
 def show_note(*args: str):
     console = Console()
-    console.print(note_book.show_all())
+    console.print(console_view.show_note_book(note_book))
+    return ""
+
+@input_error
+def helper_note(*args: str):
+    console = Console()
+    console.print(console_view.show_help_note_book())
     return ""
 
 COMMANDS = {
@@ -76,8 +87,8 @@ COMMANDS = {
     del_tag : ("del tag", ),
 
     search : ("search", ), 
-    # helper_note : ("help", ), # +-
-    show_note : ("show note", ),
+    helper_note : ("help", ),
+    show_note : ("show all", ),
 }
 
 # Знаходить команду.

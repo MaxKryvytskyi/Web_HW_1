@@ -4,8 +4,8 @@ import pickle
 
 from rich.table import Table
 
-from BotAssistant.person import Person
-
+from person import Person
+# from BotAssistant.person import Person
 
 class AddressBook(UserDict):
     # Додає в словник экземпляр классу Record
@@ -27,11 +27,11 @@ class AddressBook(UserDict):
             return deserialized_adress_book
 
 
-    # Ітерується за книгою контактів
-    def iterator(self, num:int) -> str:
-        result = self.create_page(num)
-        if result == None: return "No saved contacts"
-        for value in result: yield value
+    # # Ітерується за книгою контактів
+    # def iterator(self, num:int) -> str:
+    #     result = self.create_page(num)
+    #     if result == None: return "No saved contacts"
+    #     for value in result: yield value
 
 
     # Розбиває книгу контактів посторінково 

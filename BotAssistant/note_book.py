@@ -130,17 +130,17 @@ class NoteBook(UserDict):
             self.dict_num[str(keys)] = str(num)
             self.dict_keys[str(num)] = str(keys)
 
-    def show_all(self):
-        table = Table(title=f"Note Book")
-        table.add_column("Num", justify="center", style="cyan", no_wrap=False)
-        table.add_column("Tag", justify="center", style="cyan", no_wrap=False)
-        table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+    # def show_all(self):
+        # table = Table(title=f"Note Book")
+        # table.add_column("Num", justify="center", style="cyan", no_wrap=False)
+        # table.add_column("Tag", justify="center", style="cyan", no_wrap=False)
+        # table.add_column("Note", justify="center", style="cyan", no_wrap=False)
   
-        for num, record in self.data.items():
-            table.add_row(f"{self.dict_num[str(num)]}", 
-                          f"{record.tags}",
-                          f"{record.note}")
-        return table
+        # for num, record in self.data.items():
+        #     table.add_row(f"{self.dict_num[str(num)]}", 
+        #                   f"{record.tags}",
+        #                   f"{record.note}")
+        # return table
     
     def search_note_book(self, name:list) -> str:
         if name:
