@@ -1,5 +1,5 @@
 
-from view import AbstractView
+from view import AbstractViewTerminal
 
 from address_book import AddressBook
 from note_book import NoteBook
@@ -13,7 +13,7 @@ from rich.table import Table
 from rich.console import Console
 
 
-class Console_View(AbstractView):
+class ConsoleView(AbstractViewTerminal):
     def show_note_book(self, note_book: NoteBook):
         table = Table(title=f"Note Book")
         table.add_column("Num", justify="center", style="cyan", no_wrap=False)

@@ -5,7 +5,7 @@ from note_book import NoteBook
 # from BotAssistant.contact_book import AddressBook
 # from BotAssistant.note_book import NoteBook
 
-class AbstractView(ABC):
+class AbstractViewTerminal(ABC):
 
    @abstractmethod
    def show_contact_book(self, contact_book: AddressBook):

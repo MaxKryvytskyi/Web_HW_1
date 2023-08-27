@@ -15,9 +15,9 @@ from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAdd
 from address_book import AddressBook
 from person import Person
 from bot_work import input_error, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name, works_bot, start_work_bot
-from console_view import Console_View
+from console_view import ConsoleView
 
-console_view = Console_View()
+console_view = ConsoleView()
 adress_book = AddressBook()
 # ======================================================================================================
 # =========================================[ add ]======================================================

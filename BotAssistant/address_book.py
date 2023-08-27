@@ -35,46 +35,46 @@ class AddressBook(UserDict):
 
 
     # Розбиває книгу контактів посторінково 
-    def create_page(self, num:int) -> dict|None:
-        if len(self.data) == 0: return None
-        result_list = []
-        page = 1
-        count = 0
-        work = True
+    # def create_page(self, num:int) -> dict|None:
+    #     if len(self.data) == 0: return None
+    #     result_list = []
+    #     page = 1
+    #     count = 0
+    #     work = True
 
-        for i in self.data.values():
-            count +=1
-            if work:
-                table = Table(title=f"Page {page}")
-                table.add_column("Name", justify="center", style="cyan", no_wrap=False)
-                table.add_column("Phones", justify="center", style="magenta", no_wrap=False)
-                table.add_column("Emails", justify="center", style="cyan", no_wrap=False)
-                table.add_column("Birthday", justify="center", style="cyan", no_wrap=False)
-                table.add_column("Status", justify="center", style="cyan", no_wrap=False)
-                table.add_column("Address", justify="center", style="cyan", no_wrap=False)
-                table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+    #     for i in self.data.values():
+    #         count +=1
+    #         if work:
+    #             table = Table(title=f"Page {page}")
+    #             table.add_column("Name", justify="center", style="cyan", no_wrap=False)
+    #             table.add_column("Phones", justify="center", style="magenta", no_wrap=False)
+    #             table.add_column("Emails", justify="center", style="cyan", no_wrap=False)
+    #             table.add_column("Birthday", justify="center", style="cyan", no_wrap=False)
+    #             table.add_column("Status", justify="center", style="cyan", no_wrap=False)
+    #             table.add_column("Address", justify="center", style="cyan", no_wrap=False)
+    #             table.add_column("Note", justify="center", style="cyan", no_wrap=False)
 
-            table.add_row(f"{i.name.value_of()}", 
-                          f"{[el.value_of() for el in i.phones] if [el.value_of() for el in i.phones] != [''] else ''}", 
-                          f"{[el.value_of() for el in i.emails] if [el.value_of() for el in i.emails] != [''] else ''}",
-                          f"{i.birthday.value_of()}",
-                          f"{i.status.value_of()}",
-                          f"{i.address.value_of()}",
-                          f"{i.note.value_of()}")
+    #         table.add_row(f"{i.name.value_of()}", 
+    #                       f"{[el.value_of() for el in i.phones] if [el.value_of() for el in i.phones] != [''] else ''}", 
+    #                       f"{[el.value_of() for el in i.emails] if [el.value_of() for el in i.emails] != [''] else ''}",
+    #                       f"{i.birthday.value_of()}",
+    #                       f"{i.status.value_of()}",
+    #                       f"{i.address.value_of()}",
+    #                       f"{i.note.value_of()}")
             
-            work = False
-            if count == len(self.data):
-                result_list.append(table)
-                return result_list
-            if count == num: 
-                result_list.append(table)
-                count = 0
-                page += 1
-                work = True
+    #         work = False
+    #         if count == len(self.data):
+    #             result_list.append(table)
+    #             return result_list
+    #         if count == num: 
+    #             result_list.append(table)
+    #             count = 0
+    #             page += 1
+    #             work = True
      
         
-        result_list.append(table)
-        return result_list
+    #     result_list.append(table)
+    #     return result_list
 
 
     # Виконує пошук в кнізі контактів за ключовим значенням

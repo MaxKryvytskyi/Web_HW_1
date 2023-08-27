@@ -7,10 +7,10 @@ import re
 
 from bot_work import input_error, works_bot, start_work_bot
 from note_book import Note, Tag, Record, NoteBook
-from console_view import Console_View
+from console_view import ConsoleView
 
 note_book = NoteBook()
-console_view = Console_View()
+console_view = ConsoleView()
 
 @input_error
 def add(*args: str): 
