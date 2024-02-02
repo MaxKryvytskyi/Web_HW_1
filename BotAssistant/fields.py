@@ -45,7 +45,7 @@ class PersonPhoneNumbers(PersonFormatterInfo):
             if not value.isdigit():
                 raise ExceptionIncorrectFormat(f"Телефон {value} має складатися тільки з літер")
             if len(value) == 12: self.__value = value # "380 12 345 67 89"
-            else: raise ExceptionIncorrectFormat(f"Не правильний формат телефону {value} очікуєтся 0500000000")
+            else: raise ExceptionIncorrectFormat(f"Не правильний формат телефону {value} очікуєтся 380 12 345 67 89")
         else: self.__value = "none"
     
     def value_of(self):

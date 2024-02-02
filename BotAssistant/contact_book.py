@@ -351,25 +351,7 @@ def birthday(*args: str):
     time = person.birthday.days_to_birthday() 
     if not time: return f"Contact {args[0].capitalize()} has no stored date of birth"
     else: return f"To the bottom of the birth of {args[0].capitalize()} remained {time}"
-    
-# @input_error
-# def show_page(*args:str) -> str:
-#     n = 1
-#     count = args[0] if len(args) >= 1 else 5
-#     c = adress_book.iterator(int(count))
-#     for _ in range(1000):
-#         try:
-#             text = next(c)
-#             if text == None: raise StopIteration
-#         except StopIteration:
-#             if n > 1 : return "No more pages"
-#             else: return f"No saved contacts"
-#         stop = input(f"Page : {n}")
 
-#         if stop.lower() == "stop": return ""
-#         console = Console()
-#         console.print(text)
-#         n += 1
 
 @input_error
 def show_page(*args:str) -> str:
